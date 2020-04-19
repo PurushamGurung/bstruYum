@@ -32,7 +32,7 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href=#><i class="material-icons">restaurant_menu</i>truYum</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#gg">
             <span class="navbar-toggler-icon"></span></button>
@@ -51,8 +51,9 @@
            <div class="row">
                <div class="col-12">
                <div class="form-group">
-                   <label for="itemName">Item Name</label>
-            <input type="text" class="form-control" id="itemName" name="itemName" /></div>
+                   <label for="title">Item Name</label>
+            <input type="text" class="form-control" id="title" name="title" maxlength=200/></div>
+                
             
                
                </div>
@@ -62,13 +63,16 @@
                 <div class="col-md-3">
                     <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="number" class="form-control"  id="price" name="price" />
+                    <input type="text" class="form-control"  id="price" name="price" />
+                        <div id="status3" style="color: red;"></div>
+                        <div id="status4" style="color: red;"></div>
                 </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
                      <label for="dateOfLaunch">Date Of Launch</label>
-                    <input type="text" class="form-control" id="dateoflaunch" placeholder="dd/mm/yyyy">
+                    <input type="text" class="form-control" id="dateOfLaunch" name="dateOfLaunch" placeholder="dd/mm/yyyy">
+                      
                 </div>
                 </div>
                 <div class="col-md-3">
@@ -76,22 +80,25 @@
                         
                         <label for="category">Category</label>
                         <select class="form-control" id="category" name="category">
+                            <option value=""></option>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
                         </select>
                     </div>
+                  
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="optradio">Active</label><br>
+                        <label for="active">Active</label><br>
 					<label class="radio-inline">
-						<input type="radio" name="optradio">Yes
+						<input type="radio" id="active" name="active">Yes
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="optradio">No
+						<input type="radio" id="active" name="active">No
 					</label>
+                        <div id="status7" style="color: red;"></div>
                     </div>
                 </div>
             </div>
@@ -99,10 +106,11 @@
             <div class="col-md-3">
                 <div class="form-group">
                 <label class="checkbox-inline">
-						<input type="checkbox">
+						<input type="checkbox" name="freeDelivery">
 					</label>
-						<label>Free Delivery</label>
+						<label for="freeDelivery">Free Delivery</label>
                 </div>
+               
                 </div>
             </div>
             
@@ -131,7 +139,7 @@
 			$("button").click(function(){
 			  $("button").removeClass("active");
 			  $(this).addClass("active");
-			});
+            });</script>
 				
     </body>
 </HTML>
